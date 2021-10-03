@@ -967,7 +967,6 @@ pre .javascript .function {
 .site-meta {
   flex-grow: 1;
   text-align: center;
-  background: rgba(255,255,255,0);
 }
 @media (max-width: 767px) {
   .site-meta {
@@ -1170,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #0e69ff;
+  background: #ff5e7d;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2177,7 +2176,7 @@ embed {
   text-align: center;
 }
 .custom-logo .site-title {
-  color: #222;
+  color: rgba(255,255,255,0);
   margin: 10px auto 0;
 }
 .custom-logo .site-title a {
