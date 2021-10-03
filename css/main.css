@@ -975,7 +975,7 @@ pre .javascript .function {
 }
 .brand {
   border-bottom: none;
-  color: var(--brand-color);
+  color: rgba(255,255,255,0);
   display: inline-block;
   line-height: 1.375em;
   padding: 0 40px;
@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3df9ff;
+  background: #ff0054;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2151,7 +2151,6 @@ ul.breadcrumb li + li:last-child {
 }
 .header-inner {
   padding-top: 100px;
-  background: rgba(255,255,255,0);
 }
 @media (max-width: 767px) {
   .header-inner {
