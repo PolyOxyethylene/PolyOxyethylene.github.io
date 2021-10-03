@@ -967,6 +967,7 @@ pre .javascript .function {
 .site-meta {
   flex-grow: 1;
   text-align: center;
+  background: rgba(255,255,255,0);
 }
 @media (max-width: 767px) {
   .site-meta {
@@ -976,6 +977,7 @@ pre .javascript .function {
 .brand {
   border-bottom: none;
   color: var(--brand-color);
+  display: inline-block;
   line-height: 1.375em;
   padding: 0 40px;
   position: relative;
@@ -1168,7 +1170,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9fff81;
+  background: #0e69ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2297,7 +2299,7 @@ body {
   background-position: 50% 50%;
 }
 .header-inner {
-  opacity: 0;
+  opacity: 0.8;
 }
 .sidebar {
   transition-duration: 0.4s;
