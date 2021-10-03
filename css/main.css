@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #141ceb;
+  background: #3df9ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2151,6 +2151,7 @@ ul.breadcrumb li + li:last-child {
 }
 .header-inner {
   padding-top: 100px;
+  background: rgba(255,255,255,0);
 }
 @media (max-width: 767px) {
   .header-inner {
@@ -2176,7 +2177,7 @@ embed {
   text-align: center;
 }
 .custom-logo .site-title {
-  color: $white;
+  color: #222;
   margin: 10px auto 0;
 }
 .custom-logo .site-title a {
