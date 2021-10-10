@@ -221,7 +221,7 @@ p {
 }
 a,
 span.exturl {
-  border-bottom: 1px solid #caf0f8;
+  border-bottom: 1px solid #0096c7;
   color: var(--link-color);
   outline: 0;
   text-decoration: none;
@@ -991,7 +991,7 @@ pre .javascript .function {
   margin: 0;
 }
 .site-subtitle {
-  color: #caf0f8;
+  color: #0096c7;
   font-size: 0.8125em;
   margin: 10px 0;
 }
@@ -1117,7 +1117,7 @@ pre .javascript .function {
   }
 }
 .sidebar-inner {
-  color: #caf0f8;
+  color: #0096c7;
   padding: 18px 10px;
   text-align: center;
 }
@@ -1150,7 +1150,7 @@ pre .javascript .function {
   text-align: center;
 }
 .site-description {
-  color: #caf0f8;
+  color: #0096c7;
   font-size: 1em;
   margin-top: 5px;
   text-align: center;
@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #f7703c;
+  background: #aa7d06;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1369,7 +1369,7 @@ pre .javascript .function {
   font-size: 0.875em;
 }
 .footer {
-  color: #caf0f8;
+  color: #0096c7;
   font-size: 0.875em;
   padding: 20px 0;
 }
@@ -1528,7 +1528,7 @@ pre .javascript .function {
 }
 .post-body .image-caption,
 .post-body .figure .caption {
-  color: #caf0f8;
+  color: #0096c7;
   font-size: 0.875em;
   font-weight: bold;
   line-height: 1;
@@ -1572,7 +1572,7 @@ pre .javascript .function {
   position: relative;
 }
 .posts-collapse .collection-title::before {
-  background: #caf0f8;
+  background: #0096c7;
   border: 1px solid #fff;
   border-radius: 50%;
   content: ' ';
@@ -1810,7 +1810,7 @@ pre .javascript .function {
   margin-left: 5px;
 }
 .posts-expand .post-meta {
-  color: #caf0f8;
+  color: #0096c7;
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.75em;
   margin: 3px 0 60px 0;
@@ -1821,7 +1821,7 @@ pre .javascript .function {
   margin-top: 2px;
 }
 .posts-expand .post-meta time {
-  border-bottom: 1px dashed #caf0f8;
+  border-bottom: 1px dashed #0096c7;
   cursor: pointer;
 }
 .post-meta .post-meta-item + .post-meta-item::before {
@@ -2271,7 +2271,7 @@ embed {
 .sidebar a,
 .sidebar span.exturl {
   border-bottom-color: #555;
-  color: #caf0f8;
+  color: #0096c7;
 }
 .sidebar a:hover,
 .sidebar span.exturl:hover {
