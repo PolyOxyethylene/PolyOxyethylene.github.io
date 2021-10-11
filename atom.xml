@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-11T10:39:29.932Z</updated>
+  <updated>2021-10-11T11:08:26.845Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,8 +21,14 @@
     <link href="http://example.com/2021/10/11/C-%E7%AC%94%E8%AE%B0-%E7%B1%BB-%E4%B8%80/"/>
     <id>http://example.com/2021/10/11/C-%E7%AC%94%E8%AE%B0-%E7%B1%BB-%E4%B8%80/</id>
     <published>2021-10-11T10:38:36.000Z</published>
-    <updated>2021-10-11T10:39:29.932Z</updated>
+    <updated>2021-10-11T11:08:26.845Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​    C++是笔者这学期最重要的专业课之一。目前上课内容已简单介绍完C++的类的相关知识。</p><p>​    但是由于老师上课时的解析比较有深度，目前我对于C++类的认识还比较浅显，所以打算再花点时间自学并整理一遍相关内容。</p><p>​    <span id="more"></span></p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;​    C++是笔者这学期最重要的专业课之一。目前上课内容已简单介绍完C++的类的相关知识。&lt;/p&gt;
+&lt;p&gt;​    但是由于老师上课时的解析比较有深度，目前我对于C++类的认识还比较浅显，所以打算再花点时间自学并整理一遍相关内容。&lt;/p&gt;
+&lt;p&gt;​</summary>
     
     
     
