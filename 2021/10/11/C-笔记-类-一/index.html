@@ -28,7 +28,7 @@
 <meta property="og:description" content="前言​    C++是笔者这学期最重要的专业课之一。目前上课内容已简单介绍完C++的类的相关知识。 ​    但是由于老师上课时的解析经常听不懂比较有深度，目前我对于C++类的认识还比较浅显，所以打算再花点时间自学并整理一遍相关内容。 ​">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-11T10:38:36.000Z">
-<meta property="article:modified_time" content="2021-10-13T12:55:27.884Z">
+<meta property="article:modified_time" content="2021-10-13T13:55:14.357Z">
 <meta property="article:author" content="氧乙烯">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -226,7 +226,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-13 20:55:27" itemprop="dateModified" datetime="2021-10-13T20:55:27+08:00">2021-10-13</time>
+                <time title="修改时间：2021-10-13 21:55:14" itemprop="dateModified" datetime="2021-10-13T21:55:14+08:00">2021-10-13</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -244,14 +244,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.6k</span>
+              <span>2.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -276,7 +276,7 @@
 
 
 
-<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>​    构造函数是类封装的特殊的实例函数成员，用于对对象的数据成员进行初始化，<u>对象必须初始化且仅能初始化一次</u>。 构造函数不能被显式调用。 </p>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>​    构造函数是类封装的特殊的实例函数成员，用于对对象的数据成员进行初始化，<u>对象必须初始化且仅能初始化一次</u>。 <strong>默认构造函数</strong>不能被显式调用。 </p>
 <p>​    构造函数为对象申请各种资源用于初始化。除了隐含参数 <code>this</code> 外，构造函数还可以自带若干参数。</p>
 <p>​    构造函数与类名同名。</p>
 <p>​    <strong>需要注意的是</strong>，如果没有提供任何构造函数，则C++会自动提供<strong>默认构造函数</strong>，它不会做任何工作。对于某个类，如Stock类，默认构造函数可能如下：</p>
@@ -286,6 +286,11 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Stock stock1;</span><br></pre></td></tr></table></figure>
 
 <p>​    通常用户定义的默认构造函数应可以给给所有成员提供隐式初始值。</p>
+<p>​    构造函数既可以用于类的初始化，也可以用来给类赋新值。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Stock stock2 = <span class="built_in">Stock</span>(<span class="string">&quot;Boffo Objects&quot;</span>, <span class="number">2</span>, <span class="number">2.0</span>);	<span class="comment">//这里是初始化，可能会创建新的临时对象（看编译器）用于赋值</span></span><br><span class="line">stock1 = <span class="built_in">Stock</span>(<span class="string">&quot;Niftty Foods&quot;</span>, <span class="number">10</span>, <span class="number">50.0</span>);	<span class="comment">//这里是赋值而不是初始化，实际上创建了一个新的对象，然后将其内容复制给stock1</span></span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="析构函数"><a href="#析构函数" class="headerlink" title="析构函数"></a>析构函数</h3><p>​    析构函数也是类封装的特殊的实例函数成员，其特点是和类名同名且名前带有<strong>“ ~ ”</strong>，同时，无论是程序自定义还是C++默认生成的析构函数，都只能有一个隐含参数 <code>this</code> 。  析构函数可以被显式调用。</p>
 <p>​    析构函数用于对数据成员申请的资源进行回收，如果构造函数为类成员动态分配了内存（如<strong>new</strong>），则析构函数相应地要释放这些内存（<strong>delete</strong>）。与构造函数不同，析构函数可以执行多次，但是应当尽量避免资源被多次释放。</p>
 <p>​    构造函数和析构函数都不可以定义返回类型。</p>
@@ -293,6 +298,17 @@
 
 
 
+<h3 id="C-11-列表初始化"><a href="#C-11-列表初始化" class="headerlink" title="C++11 列表初始化"></a>C++11 列表初始化</h3><p>​    在<strong>C++11</strong>中，可以将列表初始化语法应用于类，只要提供与某个构造函数的参数列表匹配的内容即可。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Stock hot_tip = &#123;<span class="string">&quot;...&quot;</span>, <span class="number">100</span>, <span class="number">45.0</span>&#125;;	<span class="comment">//可与构造函数Stock(const string &amp;co, long n = 0, double pr = 0.0)匹配</span></span><br><span class="line">Stock temp = &#123;&#125;;	<span class="comment">//可与无参的默认构造函数Stock()匹配</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="const成员函数"><a href="#const成员函数" class="headerlink" title="const成员函数"></a>const成员函数</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Stock land = <span class="built_in">Stock</span>(<span class="string">&quot;...&quot;</span>);</span><br><span class="line">land.<span class="built_in">show</span>();	<span class="comment">//假设show()是Stock的成员函数</span></span><br></pre></td></tr></table></figure>
+
+<p>​    假如有如上代码片段，对于当前的C++，编译器会拒绝第二行。因为show()的代码可能不能保证调用对象不被修改——调用对象就跟const一样不应被修改。对于没有任何参数的成员函数，我们并不能通过将函数参数声明为const引用或指向const的指针来解决问题。这里的解决方法是将const关键字加到函数的括号后面，即相关函数的定义和声明应如下所示：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span> <span class="keyword">const</span></span>;	<span class="comment">//保证函数不修改对象</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Stock::show</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>​    以这种方式声明和定义的类函数被称为<strong>const成员函数</strong>。</p>
 
     </div>
 
@@ -394,7 +410,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E%E5%8F%8A%E5%AE%9A%E4%B9%89"><span class="nav-number">2.</span> <span class="nav-text">类的声明及定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">关于访问控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">析构函数</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E7%9A%84%E5%A3%B0%E6%98%8E%E5%8F%8A%E5%AE%9A%E4%B9%89"><span class="nav-number">2.</span> <span class="nav-text">类的声明及定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">2.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6"><span class="nav-number">2.2.</span> <span class="nav-text">关于访问控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-11-%E5%88%97%E8%A1%A8%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">2.5.</span> <span class="nav-text">C++11 列表初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#const%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">2.6.</span> <span class="nav-text">const成员函数</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
  
@@ -481,7 +497,7 @@
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">2 分钟</span>
 </div>
 
 
