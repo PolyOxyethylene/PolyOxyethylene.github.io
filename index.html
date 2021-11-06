@@ -217,7 +217,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-11-07 00:21:05 / 修改时间：00:21:53" itemprop="dateCreated datePublished" datetime="2021-11-07T00:21:05+08:00">2021-11-07</time>
+              <time title="创建时间：2021-11-07 00:21:05 / 修改时间：00:23:36" itemprop="dateCreated datePublished" datetime="2021-11-07T00:21:05+08:00">2021-11-07</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,26 +255,14 @@
 
       
           <p>一看就知道我是上课没有好好听课。</p>
-<!--  more -->
-
-<h3 id="8-1虚函数"><a href="#8-1虚函数" class="headerlink" title="8.1虚函数"></a>8.1虚函数</h3><h4 id="8-1-1-虚函数的声明和定义"><a href="#8-1-1-虚函数的声明和定义" class="headerlink" title="8.1.1 虚函数的声明和定义"></a>8.1.1 虚函数的声明和定义</h4><p>重载函数是一种静态多态函数， 虚函数是一种动态多态函数。 </p>
-<p>当派生类中含有与基类虚函数同名的实例成员函数，其显式参数类型都应相同；当基类虚函数返回类型为基类指针p或者引用r时，派生类同名函数成员返回类型必须为可向p或者r赋值的基类/派生类指针(或引用)，其他情况两者的返回类型必须相同。</p>
-<p><strong>C++中不允许将构造函数定义为虚函数或者纯虚函数。</strong></p>
-<p>当基类中包含基类指针或者引用时，应将其析构函数定义为虚函数，所以一般可以将析构函数定义为虚函数。最好也将类的所有实例成员函数定义为虚函数。</p>
-<p>当基类和派生类都定义了原型”相容”的虚函数时，如果基类指针指向的是派生类对象，则通过基类指针调用的是派生类的函数成员，否则调用基类的函数成员(基类引用引用了派生类对象同理)。</p>
-<p>不能用<code>virtual</code>修饰类的友元函数，虚函数也不能定义为<code>constexpr</code>函数。</p>
-<h4 id="8-1-2-虚函数的重载和内联"><a href="#8-1-2-虚函数的重载和内联" class="headerlink" title="8.1.2 虚函数的重载和内联"></a>8.1.2 虚函数的重载和内联</h4><p>基类与派生类定义的同名虚函数的访问权限可以不同。在C++的同一个类中，不能定义显式参数表(类型)完全相同、仅返回类型不同的静态成员函数或实例成员函数。    <strong>基类虚函数的特性会一直继承</strong>。</p>
-<p>基类指针指向派生类对象时，调用成员函数时优先调用离该派生类最近的实例成员函数，若在该对象继承的类中都找不到所找函数时，才会调用基类对应的成员函数。若想限定使用某一级中的成员函数，可以用类名加作用域运算符 <strong>“::”</strong> 进行限定。
-　　</p>
-<h5 id="关于内联inline"><a href="#关于内联inline" class="headerlink" title="关于内联inline"></a>关于内联inline</h5><p>虚函数可以申明为<code>inline</code>，具体到编译器解释时候，如果编译器在编译的时候就可以确定该虚函数的决议，则编译器以<code>inline</code>方式静态决议该虚函数。如果编译器在编译的时候不能决定，则必须在运行时决议虚函数，此时虚函数不能以<code>inline</code>函数的方式调用。</p>
-<h5 id="关于友元friend和virtual、static"><a href="#关于友元friend和virtual、static" class="headerlink" title="关于友元friend和virtual、static"></a>关于友元friend和virtual、static</h5><p>因为<code>friend</code>声明的函数不是宿主类的函数成员，所以不能和<code>virtual</code>一起使用，除非被定义的函数已经是另一个类的虚函数成员；<code>friend</code>一般也不能跟<code>static</code>一起使用，除非<code>static</code>定义的函数是文件作用域内的静态函数或者其他类定义的静态函数。</p>
-<p><code>virtual</code>一定不能与<code>static</code>一起使用，因为<code>static</code>定义的任何函数都不含隐含参数this，<code>virtual</code>则恰好相反。</p>
-<h3 id="8-2-虚析构函数"><a href="#8-2-虚析构函数" class="headerlink" title="8.2 虚析构函数"></a>8.2 虚析构函数</h3><p>如果为基类和派生类的对象分配了动态内存，或者为派生类对象的成员分配了动态内存，在一定要将基类喝派生类的析构函数定义为虚函数，否则极有可能造成内存泄漏。</p>
-<h3 id="8-3-类的引用"><a href="#8-3-类的引用" class="headerlink" title="8.3 类的引用"></a>8.3 类的引用</h3><p>引用变量是被引用实体的别名，被引用的对象应该自己负责构造和析构。</p>
-<h4 id="8-3-1-类的引用变量及其析构"><a href="#8-3-1-类的引用变量及其析构" class="headerlink" title="8.3.1 类的引用变量及其析构"></a>8.3.1 类的引用变量及其析构</h4><p>如果类A的引用变量r引用了通过<strong>new</strong>生成的对象x，而在退出r的作用域之前没将x传到作用域之外(转移)，也没有主动去析构x和释放对象x所占用的内存，那么就应该用<code>delete &amp;r</code>析构x并释放他占用的内存(注意<code>r.~A()</code>仅用于析构x，而不能释放x占用的内存，从而造成内存泄露)。</p>
-<p>当然，如果有址引用变量引用的对象不是通过<strong>new</strong>产生的，则引用变量无需负责对被引用的对象进行析构。</p>
-<p>无址引用变量引用的是对象常量，由于移动语义的引入，被无址引用的常量对象的析构将推迟到该引用变量生命期的结束。所以虽然无址引用变量不负责常量对象的析构，但被其引用的常量对象的析构确实与变量的生命期有关。</p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/11/07/%E9%A9%AC-%E5%8F%82%E8%80%83%E4%B9%A6%E6%91%98%E6%8A%84%EF%BC%9A%E5%A4%9A%E6%80%81%E4%B8%8E%E8%99%9A%E5%87%BD%E6%95%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
