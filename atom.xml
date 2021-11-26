@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-17T12:35:40.601Z</updated>
+  <updated>2021-11-26T15:43:49.500Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人文摄影中如何拍摄陌生人</title>
+    <link href="http://example.com/2021/11/26/%E4%BA%BA%E6%96%87%E6%91%84%E5%BD%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E6%8B%8D%E6%91%84%E9%99%8C%E7%94%9F%E4%BA%BA/"/>
+    <id>http://example.com/2021/11/26/%E4%BA%BA%E6%96%87%E6%91%84%E5%BD%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E6%8B%8D%E6%91%84%E9%99%8C%E7%94%9F%E4%BA%BA/</id>
+    <published>2021-11-26T15:32:12.000Z</published>
+    <updated>2021-11-26T15:43:49.500Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://imgtu.com/i/oZsYVA"><img src="https://z3.ax1x.com/2021/11/26/oZsYVA.jpg" alt="oZsYVA.jpg"></a></p><p>人文摄影每个人的定义都不同，我觉得本质就是关注人的生活状态的摄影活动。通常人文照片当中除了人（主体）以外，还会有背景、线条、符号等引出照片的故事（氛围），这五点称为照片的五要素。这里就不展开了 ，只简单介绍下我自己拍摄人文照片的三个拍摄陌生人的方法和拍摄方法。</p><p>陌生人的人像照（指还是能交待环境，不是过度虚化的人文类人像照）与人文照有相同点，也有很大的不同点，先对比下人像照片和人文照片有什么区别。 </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/oZsYVA&quot;&gt;&lt;img src=&quot;https://z3.ax1x.com/2021/11/26/oZsYVA.jpg&quot; alt=&quot;oZsYVA.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;人文摄影每个人的定义都不同，我觉得本</summary>
+      
+    
+    
+    
+    <category term="随笔" scheme="http://example.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="日常" scheme="http://example.com/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>伪产品设计报告</title>
