@@ -1214,7 +1214,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fa3cff;
+  background: #ffffd6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2446,7 +2446,6 @@ body {
   background-position: 50% 50%;
 }
 .header-inner {
-  background: url("/images/bkimage5.png");
   opacity: 1;
 }
 .sidebar {
