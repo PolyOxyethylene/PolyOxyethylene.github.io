@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/CB(32x32).png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/CB(16x16).png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.json"};
+  </script>
+
+  <meta name="description" content="前言这周六自己选的公选课《产品的商业逻辑》就结课了，作为结课作业，我们需要完成一篇产品设计报告(内容不限，产品形态不限)。 最后是选择了设计一台手机了事(其实还没写完也没有画概念图)，在此感谢数码产品带佬 @寞落的风 提供的帮助以及建议。 细节之处可能不太符合逻辑，如有雷同，不胜荣幸。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="伪产品设计报告">
+<meta property="og:url" content="http://example.com/2021/11/17/%E4%BC%AA%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="Oxyethylene&#39;s Blog">
+<meta property="og:description" content="前言这周六自己选的公选课《产品的商业逻辑》就结课了，作为结课作业，我们需要完成一篇产品设计报告(内容不限，产品形态不限)。 最后是选择了设计一台手机了事(其实还没写完也没有画概念图)，在此感谢数码产品带佬 @寞落的风 提供的帮助以及建议。 细节之处可能不太符合逻辑，如有雷同，不胜荣幸。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-11-17T12:25:37.136Z">
+<meta property="article:modified_time" content="2021-11-17T12:35:40.601Z">
+<meta property="article:author" content="氧乙烯">
+<meta property="article:tag" content="日常">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/11/17/%E4%BC%AA%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>伪产品设计报告 | Oxyethylene's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Oxyethylene's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+<a target="_blank" rel="noopener" href="https://github.com/PolyOxyethylene" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Oxyethylene's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-links">
+
+    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    
+
+    
+        <!-- 页面点击小红心 -->
+        <script type="text/javascript" src="/js/src/clicklove.js"></script>
+    
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/17/%E4%BC%AA%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/arknights.png">
+      <meta itemprop="name" content="氧乙烯">
+      <meta itemprop="description" content="我的腿让我停下，可是心却不允许我那么做">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Oxyethylene's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          伪产品设计报告
+        </h1>
+
+        <div class="post-meta">
+           
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-11-17 20:25:37 / 修改时间：20:35:40" itemprop="dateCreated datePublished" datetime="2021-11-17T20:25:37+08:00">2021-11-17</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>这周六自己选的公选课《产品的商业逻辑》就结课了，作为结课作业，我们需要完成一篇产品设计报告(内容不限，产品形态不限)。</p>
+<p>最后是选择了设计一台手机了事(<del>其实还没写完也没有画概念图</del>)，在此感谢数码产品带佬 <strong>@寞落的风</strong> 提供的帮助以及建议。</p>
+<p>细节之处可能不太符合逻辑，如有雷同，不胜荣幸。</p>
+<span id="more"></span>
+
+<h2 align = "center"> Penta Q 智能手机设计稿 </h2>
+
+<h4 id="用户需求分析"><a href="#用户需求分析" class="headerlink" title="用户需求分析"></a>用户需求分析</h4><h5 id="用户需求"><a href="#用户需求" class="headerlink" title="用户需求"></a>用户需求</h5><p>在当今手机市场上的主流手机大多追求搭配大屏幕、优秀的拍照性能以及强大的处理器性能，不过，在这个时代，同样有着与之相对的一部分消费者：他们追求轻薄、小屏、外观时尚且握持感舒适的手机。当前市场上缺少这样类型的手机。</p>
+<h5 id="需求特点"><a href="#需求特点" class="headerlink" title="需求特点"></a>需求特点</h5><ol>
+<li><p>对手机三围、重量极度敏感，追求<strong>180g</strong>以下的机身重量以及<strong>8mm</strong>以下的机身厚度；同时，并不太在意因为缩减机身体积带来的电池容量减少、性能下降、散热变差的负面影响；</p>
+</li>
+<li><p>对手机的<strong>外观CMF</strong>、<strong>品牌效应</strong>比较看重，比起手机本身的功能价值，更在意手机的外在颜值以及面子问题；</p>
+</li>
+<li><p>手机价格对此类用户具有两面性：当手机价格区间<strong>1500 ~ 2500</strong>之间的时候，他们不会在意手机的具体价格；当手机超过<strong>3000</strong>元人民币的时候，由于高价格区间段具有上位竞品(如苹果数字系列)，此类手机对于他们的吸引力会逐步下降。</p>
+</li>
+</ol>
+<h5 id="目标市场选择"><a href="#目标市场选择" class="headerlink" title="目标市场选择"></a>目标市场选择</h5><p>针对一二三线城市以及下级城镇的、平时一般不会选择在网上进行购机的年轻用户市场。</p>
+<h4 id="产品开发"><a href="#产品开发" class="headerlink" title="产品开发"></a>产品开发</h4><h5 id="产品属性"><a href="#产品属性" class="headerlink" title="产品属性"></a>产品属性</h5><ol>
+<li><p><strong>核心规格</strong></p>
+<p><strong>中央处理器选择</strong>：联发科技<strong>mediatek  Dimensity 920 5G</strong> 移动处理器；</p>
+<p><strong>内存&amp;存储搭配</strong>：<strong>8 + 128 / 8 + 256 GB</strong> ，内存规格为<strong>LPDDR 4X</strong> @ 2133 Mhz，闪存规格为 <strong>UFS 2.2</strong> ;</p>
+</li>
+<li><p><strong>外围配置</strong></p>
+<p><strong>屏幕显示</strong>：6.2英寸 2340 * 1080分辨率<strong>AMOLED</strong> 10亿色显示屏，<strong>DCI-P3广色域</strong>，支持<strong>HDR 10</strong>，<strong>120Hz</strong>刷新率，180Hz触控采样率；</p>
+<p><strong>充电</strong>：<strong>66W智慧超级闪充</strong>(不支持无线充电) &amp; 4000mah 1C电池；</p>
+<p><strong>影像规格</strong>：前置<strong>3200W柔光美颜自拍</strong>，后置<strong>10800W</strong>(wide) + 800W(ultrawide) + 500W(micro) + 200W(depth)<strong>超感光全场景AI矩阵影像系统</strong></p>
+<p>支持<strong>AIS智慧防抖</strong>，最高支持<strong>4K 30Fps超清录制</strong>；</p>
+<p><strong>音响</strong>：立体声双扬声器，<strong>双Hi-Res认证</strong></p>
+<p><strong>其它</strong>：<strong>电竞级八维立体钢化液冷散热结构</strong>、NFC、纳米镀层防水、<strong>超感屏下指纹5.0</strong>、4D震感线性马达</p>
+</li>
+<li><p><strong>外观参数</strong>(实验室测量数据)</p>
+<p><strong>机身三围</strong>：154.2 * 70.1 * 7.6 mm</p>
+<p><strong>重量</strong>：168g</p>
+<p><strong>机身材质</strong>：中框为铝合金复合材质，后盖为AG磨砂材质/亮面玻璃</p>
+<p><strong>SKU</strong>：黑色、白色(亮面)；蓝色、粉色、绿色(磨砂)</p>
+</li>
+<li><p>系统</p>
+<p><strong>华为智选12</strong>系统(又名EMUI 12，基于Android 11，兼容homo OS 2.0)，36个月内不卡顿，支持2年内OTA系统&amp;安全更新。</p>
+</li>
+</ol>
+<h5 id="产品如何满足用户需求"><a href="#产品如何满足用户需求" class="headerlink" title="产品如何满足用户需求"></a>产品如何满足用户需求</h5><ol>
+<li><p>本产品为<strong>华为智选产品</strong>，具有<strong>华为官方认证资格</strong>，某种程度上属于华为产品序列，用户放心购买；</p>
+</li>
+<li><p>产品从<strong>外观</strong>、<strong>尺寸</strong>及<strong>重量</strong>方面基本满足了这部分用户的需求，同时没有彻底抛弃高性能，选择了主流芯片厂商目前主推的<strong>中高端性能芯片</strong>，同时<strong>超级快充</strong>以及<strong>低功耗处理器</strong>也能弥补5G时代下手机电池容量偏小带来的续航问题；</p>
+</li>
+<li><p>本产品在所属价位段具有很强的竞争力，且品牌效应明显，因此也可以吸引其他线下消费者的购买欲望。</p>
+</li>
+</ol>
+<h4 id="竞品分析"><a href="#竞品分析" class="headerlink" title="竞品分析"></a>竞品分析</h4><p>竞品主要对象：友商<strong>S10e</strong>，友商<strong>reno 6</strong>， 友商 <strong>note 11 pro+</strong></p>
+<table>
+<thead>
+<tr>
+<th>对比方向</th>
+<th>Penta Q</th>
+<th>Reno 6</th>
+<th>S10e</th>
+<th>n11 pp</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>核心处理器</td>
+<td><font color="red">天玑920</font></td>
+<td><font color="green">天玑900</font></td>
+<td><font color="red">天玑920</font></td>
+<td><font color="red">天玑920</font></td>
+</tr>
+<tr>
+<td>屏幕</td>
+<td><font color="red">120Hz 10亿色 </font></td>
+<td>90Hz</td>
+<td><font color="green">60Hz 水滴屏</font></td>
+<td>120Hz</td>
+</tr>
+<tr>
+<td>拍照</td>
+<td>前置3200w 后置<font color="red">10800w+800w+500w+200w</font></td>
+<td>前置3200w 后置6400w+800w+200w</td>
+<td>前置3200w 后置6400w+800w+200w</td>
+<td><font color="green">前置1600w </font>后置10800w+800w+200w</td>
+</tr>
+<tr>
+<td>机身材质</td>
+<td>复合铝合金中框+玻璃背板</td>
+<td>磨砂铝合金中框+玻璃背板</td>
+<td>塑料中框+玻璃背板</td>
+<td>塑料中框+玻璃背板</td>
+</tr>
+<tr>
+<td>充电</td>
+<td><font color="red">66w</font></td>
+<td>65w</td>
+<td><font color = "green">44w</font></td>
+<td><font color="red">120w</font></td>
+</tr>
+<tr>
+<td>重量三围</td>
+<td><font color="red">154.2 * 70.1 * 7.6 mm 168g</font></td>
+<td>156.8 * 72.1 * 7.59mm 182g</td>
+<td>160.8 * 74.2 * 7.5mm 175 g</td>
+<td><font color = "green">163.65 * 76.19 * 8.34mm 204g</font></td>
+</tr>
+<tr>
+<td>定价</td>
+<td><font color="red">8+128   2399元 </font>                  8+256   2699元</td>
+<td>8+128   2799元    <font color = "green">12+256  3199元</font></td>
+<td>8+128    2499元       8+256    2799元</td>
+<td><font color="red">8+128    2199元 </font>           8+256    2699元</td>
+</tr>
+<tr>
+<td>NFC</td>
+<td><font color="red">有</font></td>
+<td><font color ="green">无</font></td>
+<td><font color="green">无</font></td>
+<td><font color="red">有</font></td>
+</tr>
+<tr>
+<td>系统</td>
+<td><font color="red">华为智选12</font></td>
+<td>Color OS 11.3</td>
+<td>Origin OS 1.0</td>
+<td><font color="green">MIUI 12.5</font></td>
+</tr>
+<tr>
+<td>扬声器</td>
+<td><font color="red">立体声双扬声器、双重Hi-Res认证、杜比全景声</font></td>
+<td><font color="green">单扬声器</font></td>
+<td><font color="green">单扬声器</font></td>
+<td>双扬声器</td>
+</tr>
+</tbody></table>
+<p><strong>综合以上对比可以得出未命名具有较强优势。</strong></p>
+
+    </div>
+
+    
+    
+    
+    
+    <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-heart"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+    
+    </div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>氧乙烯
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/11/17/%E4%BC%AA%E4%BA%A7%E5%93%81%E8%AE%BE%E8%AE%A1%E6%8A%A5%E5%91%8A/" title="伪产品设计报告">http://example.com/2021/11/17/伪产品设计报告/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%97%A5%E5%B8%B8/" rel="tag"># 日常</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/07/%E9%A9%AC-%E5%8F%82%E8%80%83%E4%B9%A6%E6%91%98%E6%8A%84%EF%BC%9A%E5%A4%9A%E6%80%81%E4%B8%8E%E8%99%9A%E5%87%BD%E6%95%B0/" rel="prev" title="马++参考书摘抄：多态与虚函数">
+      <i class="fa fa-chevron-left"></i> 马++参考书摘抄：多态与虚函数
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/26/%E4%BA%BA%E6%96%87%E6%91%84%E5%BD%B1%E4%B8%AD%E5%A6%82%E4%BD%95%E6%8B%8D%E6%91%84%E9%99%8C%E7%94%9F%E4%BA%BA/" rel="next" title="(转载)人文摄影中如何拍摄陌生人">
+      (转载)人文摄影中如何拍摄陌生人 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text"> Penta Q 智能手机设计稿 </span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90"><span class="nav-number">0.1.</span> <span class="nav-text">用户需求分析</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82"><span class="nav-number">0.1.1.</span> <span class="nav-text">用户需求</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%9C%80%E6%B1%82%E7%89%B9%E7%82%B9"><span class="nav-number">0.1.2.</span> <span class="nav-text">需求特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E5%B8%82%E5%9C%BA%E9%80%89%E6%8B%A9"><span class="nav-number">0.1.3.</span> <span class="nav-text">目标市场选择</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91"><span class="nav-number">0.2.</span> <span class="nav-text">产品开发</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E5%B1%9E%E6%80%A7"><span class="nav-number">0.2.1.</span> <span class="nav-text">产品属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%A7%E5%93%81%E5%A6%82%E4%BD%95%E6%BB%A1%E8%B6%B3%E7%94%A8%E6%88%B7%E9%9C%80%E6%B1%82"><span class="nav-number">0.2.2.</span> <span class="nav-text">产品如何满足用户需求</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AB%9E%E5%93%81%E5%88%86%E6%9E%90"><span class="nav-number">0.3.</span> <span class="nav-text">竞品分析</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+ 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="氧乙烯"
+      src="/images/arknights.png">
+  <p class="site-author-name" itemprop="name">氧乙烯</p>
+  <div class="site-description" itemprop="description">我的腿让我停下，可是心却不允许我那么做</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/PolyOxyethylene" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;PolyOxyethylene" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:suQingyuan666@outlook.com" title="E-Mail → mailto:suQingyuan666@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://blog.csdn.net/m0_54223001?spm=1001.2101.3001.5343" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;m0_54223001?spm&#x3D;1001.2101.3001.5343" rel="noopener" target="_blank"><i class="fa fa-hand-o-right fa-fw"></i>CSDN</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=300 height=86 src="//music.163.com/outchain/player?type=2&id=803469&auto=1&height=66"></iframe>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">氧乙烯</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">10k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9 分钟</span>
+</div>
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    小破站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客
+</span>
+</div>
+
+
+<!--
+-->
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
