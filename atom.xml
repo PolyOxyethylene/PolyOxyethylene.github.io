@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-29T16:16:18.429Z</updated>
+  <updated>2022-01-24T10:50:48.510Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java - 类与对象(更新中)</title>
+    <link href="http://example.com/2022/01/23/Java-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1(%E6%9B%B4%E6%96%B0%E4%B8%AD)/"/>
+    <id>http://example.com/2022/01/23/Java-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</id>
+    <published>2022-01-23T08:26:09.000Z</published>
+    <updated>2022-01-24T10:50:48.510Z</updated>
+    
+    <content type="html"><![CDATA[<p><em><strong>Core Java</strong></em> 也是厚得不行……</p><span id="more"></span><blockquote><p>参考资料：《Java核心技术  卷1(第十一版)》 《Java基础核心总结》</p></blockquote><hr><h3 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h3><h4 id="对象变量与对象"><a href="#对象变量与对象" class="headerlink" title="对象变量与对象"></a>对象变量与对象</h4><p>对象变量并没有实际包含一个对象，而只是引用一个对象。</p><p>在Java中，任何对象变量的值都是对存储在另外一个地方的某个对象的<strong>引用</strong>，<code>new</code>操作符的返回值也是一个引用。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Date deadline = <span class="keyword">new</span> Date();</span><br></pre></td></tr></table></figure><p>上述语句包含两个部分，<code>new Date()</code>构造了一个Date类型的对象，该表达式的返回值是对这个新创建对象的引用，这个引用存储在变量deadline中。</p><p>可以显式地将对象变量设置为<code>null</code>表示不引用任何对象。</p><p>可以把Java中的对象变量看作类似于C++中的<strong>对象指针</strong>。</p><h4 id="属性-数据成员"><a href="#属性-数据成员" class="headerlink" title="属性(数据成员)"></a>属性(数据成员)</h4><p>类最基本的要素是属性和方法。属性又称为<strong>字段</strong>。</p><h4 id="更改器方法和访问器方法"><a href="#更改器方法和访问器方法" class="headerlink" title="更改器方法和访问器方法"></a>更改器方法和访问器方法</h4><p>可以理解为C++中的一般的成员方法和const成员方法。在Java语言中，两者在语法上没有明显区别。</p><hr><h3 id="类的声明和定义"><a href="#类的声明和定义" class="headerlink" title="类的声明和定义"></a>类的声明和定义</h3><h4 id="构造器方法-构造函数"><a href="#构造器方法-构造函数" class="headerlink" title="构造器方法/构造函数"></a>构造器方法/构造函数</h4><p>类似C++中类的构造函数，构造器与类同名。不能对已经存在的对象重复调用构造器。</p><p>每个类都有构造方法。如果没有显式地为类定义构造方法，Java 编译器将会为该类提供一个默认的无参构造方法。如果你已经定义了别的构造方法，JVM就不再提供这个默认构造器(与C++类似)。</p><p>构造器的特点(除了最后一个，其他跟C++构造函数没啥区别)：</p><ul><li>与类同名</li><li>构造器可以有多个，构造器的参数也可以有多个</li><li>构造器没有返回值和参数类型</li><li>所有的Java对象都在堆中构造，构造器总是搭配 <code>new</code> 运算符来调用</li></ul><hr><h3 id="方法的重载和重写"><a href="#方法的重载和重写" class="headerlink" title="方法的重载和重写"></a>方法的重载和重写</h3><h4 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h4><p>方法重载也类似于C++。重载的条件包括：</p><ul><li>方法名称必须相同</li><li>参数列表必须不同，方法返回类型可相同可不相同</li><li>仅仅返回类型不同不足以成为方法的重载</li><li>方法的重载发生在编译时</li></ul><h4 id="方法的重写"><a href="#方法的重写" class="headerlink" title="方法的重写"></a>方法的重写</h4><p>方法重载的描述是同一类中的，方法重写描述的是父类和子类之间的关系。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span> <span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;eat fruit&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Apple</span> <span class="keyword">extends</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span> <span class="params">()</span></span>&#123;</span><br><span class="line">System.out.println(<span class="string">&quot;eat apple&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上面的代码中，子类Apple中的eat方法是对父类Fruit同名方法的重写。</p><p>重写的原则为：</p><ul><li>重写的方法应与父类保持一致，包括返回值类型、方法名称、参数列表</li><li>重写的方法可以使用 <code>Override</code> 注解来标识</li><li>子类中的重写方法访问权限不能低于父类中同名方法的访问权限</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Core Java&lt;/strong&gt;&lt;/em&gt; 也是厚得不行……&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>(转载)人文摄影中如何拍摄陌生人</title>
