@@ -28,7 +28,7 @@
 <meta property="og:description" content="学习Java中有关接口的概念。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-28T12:15:24.000Z">
-<meta property="article:modified_time" content="2022-02-28T14:16:07.480Z">
+<meta property="article:modified_time" content="2022-03-01T10:58:07.952Z">
 <meta property="article:author" content="氧乙烯">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -224,10 +224,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-02-28 20:15:24 / 修改时间：22:16:07" itemprop="dateCreated datePublished" datetime="2022-02-28T20:15:24+08:00">2022-02-28</time>
+              <time title="创建时间：2022-02-28 20:15:24" itemprop="dateCreated datePublished" datetime="2022-02-28T20:15:24+08:00">2022-02-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-01 18:58:07" itemprop="dateModified" datetime="2022-03-01T18:58:07+08:00">2022-03-01</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -244,14 +250,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>774</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -285,6 +291,32 @@
 
 <p>但是可以声明接口的变量，接口类型的变量必须引用实现了这个接口的类对象。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Comparable x;</span><br><span class="line">x = <span class="keyword">new</span> XXX(...);	<span class="comment">// XXX is the name of a class that has implemented this interface.</span></span><br></pre></td></tr></table></figure>
+
+<p>instanceof 可以检测一个对象是否实现了某个特定的接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(anObject <span class="keyword">instanceof</span> Comparable) &#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>接口可以扩展接口，语法同类继承。<br>接口中不能包含实例字段，但是可以包含常量。与接口中的方法都默认是      public 一样，接口中的字段默认是 <strong>public static final</strong>。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">A</span> </span>&#123;<span class="keyword">int</span> ACONSTANT = <span class="number">1</span>; &#125;</span><br></pre></td></tr></table></figure>
+<p>尽管每个类只能有一个超类，但是可以实现多个接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span> <span class="keyword">implements</span> <span class="title">Comparable</span>, <span class="title">Cloneable</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="接口方法"><a href="#接口方法" class="headerlink" title="接口方法"></a>接口方法</h2><h3 id="静态和私有方法"><a href="#静态和私有方法" class="headerlink" title="静态和私有方法"></a>静态和私有方法</h3><p>Java 8 中允许在接口中添加静态方法(虽然通常情况下相关的静态方法会被存放在接口的伴随类中，例如 Collection／Collections 和 Path／Paths)。<br>在Java 9 中，可以为接口添加私有方法，私有方法可以是静态或者实例方法，一般作为接口中的辅助方法来使用。</p>
+<h3 id="默认方法"><a href="#默认方法" class="headerlink" title="默认方法"></a>默认方法</h3><p>可以为接口中的方法提供一个默认的实现，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Comparable</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(T other)</span> </span>&#123;<span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line">    <span class="comment">// by default, all the elements are the same</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>默认方法可以调用其他方法，例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Collection</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;	<span class="comment">//an abstruct method</span></span><br><span class="line">    <span class="function"><span class="keyword">default</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;<span class="keyword">return</span> size() == <span class="number">0</span>; &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>默认方法的一个重要作用是 <strong>“接口演化”</strong>。</p>
+<p>以 Collection 接口为例，假如之前你为其提供了一个 Bag 类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Bag</span> <span class="keyword">implements</span> <span class="title">Collection</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>后来，在 Java 8 中，又为其提供了一个 stream 方法。如果该方法不是一个默认方法，那么此时 Bag 类将不能编译成功，因为它没有实现这个方法。如果将方法实现为一个默认方法的话，Bag 就能正常编译了。另外，如果没有重新编译 Bag 类，而是直接加载并在一个 Bag 实例上调用 stream 方法，将会调用 Collection.stream 默认方法。</p>
+<h3 id="解决默认方法的冲突"><a href="#解决默认方法的冲突" class="headerlink" title="解决默认方法的冲突"></a>解决默认方法的冲突</h3><p>如果先在一个接口中定义了一个默认方法，然后又在另一个超类或者接口中定义了一个同样的方法，某个类在继承超类且实现接口时可能会产生二义性的问题。Java 中对应的规则如下：</p>
+<ol>
+<li>超类优先。<br>如果超类中提供了一个具体的方法，且与实现接口中的某个默认方法同名同参数，默认方法会被覆盖。</li>
+<li>接口冲突。<br>如果一个接口中提供了一个默认方法，另一个接口也定义了同名同参数类型的方法(无论是不是默认方法)，必须要覆盖这个方法来解决冲突。<br>以下面的 getName 方法为例，<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Person</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;<span class="keyword">return</span> <span class="string">&quot;&quot;</span>; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Named</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">default</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;<span class="keyword">return</span> getClass().getName() + <span class="string">&quot;_&quot;</span> + hashCode(); &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">Person</span>, <span class="title">Named</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+Student 类会继承两个接口提供的不一致的 getName 方法。并不是在其中任选一个，Java 编译器会报错。解决方法是在 Student 类中再提供一个 getName 方法进行覆盖，可以选择两个冲突方法中的其中一个，例如，<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;<span class="keyword">return</span> Person.<span class="keyword">super</span>.getName();&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>接口如何产生冲突并不重要，只要两个接口中提供了同名同参数类型的方法，且<strong>至少一个</strong>接口中为其提供了默认实现，Java 编译器就会报错。比如，就算 Named 接口没有提供 getName 的默认实现，还是会产生冲突问题。</p>
+<p>相反，如果两个接口都没有为共享方法提供默认实现，就不会发生冲突。实现类可以选择实现这个方法或者不实现，不实现的时候这个类就是一个抽象类。</p>
+<p>假如上述代码中的 Person 是 Student 继承的超类，那么就会采取规则 1， Student 会继承超类中的方法，Named 中的相同默认方法会被忽略。</p>
+
     </div>
 
     
@@ -392,7 +424,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">接口的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">接口的属性</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">接口的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">接口的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">接口方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%92%8C%E7%A7%81%E6%9C%89%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">静态和私有方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95"><span class="nav-number">3.2.</span> <span class="nav-text">默认方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E9%BB%98%E8%AE%A4%E6%96%B9%E6%B3%95%E7%9A%84%E5%86%B2%E7%AA%81"><span class="nav-number">3.3.</span> <span class="nav-text">解决默认方法的冲突</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
  
@@ -473,13 +505,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">22k</span>
+    <span title="站点总字数">24k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">20 分钟</span>
+    <span title="站点阅读时长">22 分钟</span>
 </div>
 
 
